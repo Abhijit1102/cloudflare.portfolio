@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijit Rajkumar | AI/ML Engineer & Full-Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<base target="_blank">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>AR<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Building Intelligent</span>
+                <span class="title-line highlight">AI-Powered Systems</span>
+                <span class="title-line">That Scale</span>
+            </h1>
+            <p class="hero-subtitle">
+                AI/ML Engineer & Full-Stack Developer specializing in LLMs, RAG, 
+                AI Agents, and modern cloud-native applications.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> View Projects
+                </a>
+                <a href="https://github.com/Abhijit1102" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">AI Products</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="99">0</span>
+                    <span class="stat-suffix">.45%</span>
+                    <span class="stat-label">ML Accuracy</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Years Exp.</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <span class="section-tag">Featured Work</span>
+            <h2 class="section-title">Project Demos</h2>
+            <p class="section-desc">Interactive demonstrations of my latest AI and full-stack projects</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1: CLI Agent -->
+            <div class="project-card" data-project="cli-agent">
+                <div class="project-gif-container">
+                    <img src="assets/cli_agent-demo.gif" alt="CLI Agent Demo" class="project-gif" loading="lazy">
+                    <div class="gif-overlay">
+                        <button class="play-btn" onclick="openModal('cli-agent')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-version">v1.5</span>
+                        <span class="project-status live">
+                            <span class="status-dot"></span> Live
+                        </span>
+                    </div>
+                    <h3 class="project-title">🤖 CLI Agent</h3>
+                    <p class="project-desc">
+                        AI-powered GitHub orchestration system using intelligent agents to automate 
+                        repository workflows, task execution, and developer operations from the command line.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">GitHub API</span>
+                        <span class="tech-tag">AI Agents</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Abhijit1102" target="_blank" class="link-btn">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <button class="link-btn" onclick="openModal('cli-agent')">
+                            <i class="fas fa-play"></i> Watch Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Portfolio -->
+            <div class="project-card featured" data-project="portfolio">
+                <div class="project-gif-container">
+                    <img src="assets/portfolio-demo.gif" alt="Portfolio Demo" class="project-gif" loading="lazy">
+                    <div class="gif-overlay">
+                        <button class="play-btn" onclick="openModal('portfolio')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-version">v1.3</span>
+                        <span class="project-status live">
+                            <span class="status-dot"></span> Live
+                        </span>
+                    </div>
+                    <h3 class="project-title">🚀 Interactive Portfolio</h3>
+                    <p class="project-desc">
+                        A modern, animated portfolio website showcasing AI/ML projects with 
+                        interactive demos, smooth animations, and responsive design.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Tailwind</span>
+                        <span class="tech-tag">Framer Motion</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Abhijit1102" target="_blank" class="link-btn">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <button class="link-btn" onclick="openModal('portfolio')">
+                            <i class="fas fa-play"></i> Watch Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: RAG App -->
+            <div class="project-card" data-project="rag-app">
+                <div class="project-gif-container">
+                    <img src="assets/rag-app-demo.gif" alt="RAG App Demo" class="project-gif" loading="lazy">
+                    <div class="gif-overlay">
+                        <button class="play-btn" onclick="openModal('rag-app')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <span class="project-version">v1.0</span>
+                        <span class="project-status live">
+                            <span class="status-dot"></span> Live
+                        </span>
+                    </div>
+                    <h3 class="project-title">📚 RAG AI Application</h3>
+                    <p class="project-desc">
+                        Full-stack Retrieval-Augmented Generation app for document upload, 
+                        semantic search, and AI-powered Q&A with context-aware answers.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Pinecone</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">LangChain</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Abhijit1102" target="_blank" class="link-btn">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <button class="link-btn" onclick="openModal('rag-app')">
+                            <i class="fas fa-play"></i> Watch Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <span class="section-tag">Expertise</span>
+            <h2 class="section-title">Technical Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI & LLMs</h3>
+                <div class="skill-tags">
+                    <span>LangChain</span><span>OpenAI GPT</span><span>Google Gemini</span>
+                    <span>RAG</span><span>Pinecone</span><span>Qdrant</span><span>HuggingFace</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Full-Stack</h3>
+                <div class="skill-tags">
+                    <span>Next.js</span><span>React</span><span>FastAPI</span><span>Node.js</span>
+                    <span>Express.js</span><span>Tailwind CSS</span><span>REST APIs</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <h3>Databases</h3>
+                <div class="skill-tags">
+                    <span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span>
+                    <span>SQLite</span><span>Prisma</span><span>Pinecone</span><span>Qdrant</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud & DevOps</h3>
+                <div class="skill-tags">
+                    <span>AWS</span><span>GCP</span><span>Docker</span><span>Kubernetes</span>
+                    <span>GitHub Actions</span><span>Nginx</span><span>CI/CD</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                <h3>Machine Learning</h3>
+                <div class="skill-tags">
+                    <span>Neural Networks</span><span>CNNs</span><span>Random Forest</span>
+                    <span>XGBoost</span><span>Time Series</span><span>PyTorch</span><span>Scikit-learn</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <h3>Big Data</h3>
+                <div class="skill-tags">
+                    <span>Hadoop</span><span>PySpark</span><span>Kafka</span>
+                    <span>Hive</span><span>HDFS</span><span>AWS EMR</span><span>Airflow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dot red"></div>
+                        <div class="code-dot yellow"></div>
+                        <div class="code-dot green"></div>
+                        <span class="code-filename">about.py</span>
+                    </div>
+                    <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">AIEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-string">"Abhijit Rajkumar"</span>
+        self.role = <span class="code-string">"AI/ML + Full-Stack"</span>
+        self.location = <span class="code-string">"India (Remote)"</span>
+        self.years_exp = <span class="code-number">5</span>
+
+    <span class="code-keyword">def</span> <span class="code-func">current_focus</span>(self):
+        <span class="code-keyword">return</span> [
+            <span class="code-string">"LLMs & RAG Systems"</span>,
+            <span class="code-string">"AI Coding Agents"</span>,
+            <span class="code-string">"GenAI Applications"</span>,
+            <span class="code-string">"Cloud-Native ML"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-func">education</span>(self):
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"degree"</span>: <span class="code-string">"B.Sc. Mathematics"</span>,
+            <span class="code-string">"college"</span>: <span class="code-string">"Gurucharan College"</span>,
+            <span class="code-string">"focus"</span>: <span class="code-string">"Linear Algebra, Modeling"</span>
+        }</code></pre>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">About Me</span>
+                <h2>AI/ML Engineer &<br>Full-Stack Developer</h2>
+                <p>
+                    I'm an AI/ML Engineer with 1+ years of hands-on experience building end-to-end 
+                    intelligent applications. I specialize in combining <strong>Large Language Models</strong>, 
+                    <strong>Retrieval-Augmented Generation</strong>, and <strong>AI Agents</strong> with 
+                    modern full-stack engineering.
+                </p>
+                <p>
+                    Currently working as an <strong>AI/ML Intern at Euron</strong>, building 
+                    <strong>MediRAG (RAGnosis)</strong> — a full-stack RAG-powered medical document 
+                    analysis system using FastAPI, Next.js, and Pinecone.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>End-to-end AI pipeline design</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Production-ready deployments</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cloud-native architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Let's Build Something<br>Intelligent Together</h2>
+                <p>Open for full-time and freelance opportunities in AI/ML Engineering, 
+                Full-Stack Development, and Data Engineering roles.</p>
+                <div class="contact-links">
+                    <a href="mailto:abhijitrajkumar2@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>abhijitrajkumar2@gmail.com</span>
+                    </a>
+                    <a href="tel:+917005157909" class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 7005157909</span>
+                    </a>
+                    <a href="https://github.com/Abhijit1102" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/Abhijit1102</span>
+                    </a>
+                    <a href="#" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Built with <i class="fas fa-heart"></i> by Abhijit Rajkumar</p>
+            <p class="footer-copy"> 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Modal for GIF expansion -->
+    <div class="modal" id="gifModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="Project Demo" id="modalImage">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
