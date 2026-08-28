@@ -262,22 +262,79 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    PROJECTS
    ========================================================================== */
 .projects-list { display: flex; flex-direction: column; gap: 40px; }
-.project-card { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
-.project-card:nth-child(even) .project-media { order: 2; }
-.project-media { position: relative; background: var(--secondary); min-height: 260px; }
-.project-media img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-.project-media .media-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--secondary-foreground); font-family: var(--font-mono); font-size: 0.78rem; text-align: center; padding: 20px; }
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "media body"
+    "links links";
+  overflow: hidden;
+}
+
+/* alternate card: swap media/body sides, links row still spans full width */
+.project-card:nth-child(even) {
+  grid-template-areas:
+    "body media"
+    "links links";
+}
+
+.project-media {
+  grid-area: media;
+  position: relative;
+  background: var(--secondary);
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.project-media img {
+  width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0;
+  padding: 12px; /* small breathing room so the gif doesn't touch the edges */
+}
+.project-media .media-fallback {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  color: var(--secondary-foreground); font-family: var(--font-mono);
+  font-size: 0.78rem; text-align: center; padding: 20px;
+}
 .project-media .media-fallback i { font-size: 2.2rem; }
-.project-body { padding: 32px; display: flex; flex-direction: column; }
+
+.project-body {
+  grid-area: body;
+  padding: 32px 32px 8px;
+  display: flex;
+  flex-direction: column;
+}
 .project-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--primary); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
 .project-body h3 { font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 12px; }
 .project-body ul { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
 .project-body ul li { font-size: 0.88rem; color: var(--muted-foreground); padding-left: 20px; position: relative; }
 .project-body ul li::before { content: "◆"; position: absolute; left: 0; color: var(--gum-sky); font-size: 0.65rem; top: 5px; }
-.project-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.project-stack { display: flex; flex-wrap: wrap; gap: 6px; }
 .project-stack span { font-family: var(--font-mono); font-size: 0.7rem; background: var(--accent); color: var(--accent-foreground); padding: 4px 10px; border-radius: var(--radius-pill); border: 1.5px solid var(--border); }
-.project-links { display: flex; gap: 10px; margin-top: auto; }
-@media (max-width: 860px) { .project-card { grid-template-columns: 1fr; } .project-card:nth-child(even) .project-media { order: 0; } }
+
+/* buttons: own full-width row below media + body */
+.project-links {
+  grid-area: links;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px 32px 32px;
+}
+
+@media (max-width: 860px) {
+  .project-card,
+  .project-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "media"
+      "body"
+      "links";
+  }
+  .project-links { padding: 16px 24px 24px; }
+}
 
 /* ==========================================================================
    EXPERIENCE (timeline)

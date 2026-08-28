@@ -181,3 +181,43 @@ function initFooterYear() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+
+// ---- Live Demo -> gif lightbox ----
+(function () {
+  const lightbox   = document.getElementById('project-lightbox');
+  const lightboxImg = document.getElementById('project-lightbox-img');
+  const closeBtn   = document.getElementById('project-lightbox-close');
+
+  if (!lightbox || !lightboxImg || !closeBtn) return;
+
+  function openLightbox(gifSrc) {
+    lightboxImg.src = gifSrc;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.js-demo-btn').forEach((btn) => {
+    const gifSrc = btn.getAttribute('data-gif');
+    if (!gifSrc) return; // no gif set -> let it behave as a normal link
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(gifSrc);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox(); // click outside the image
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+})();
