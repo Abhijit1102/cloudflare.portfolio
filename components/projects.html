@@ -1,0 +1,101 @@
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Selected Work</span>
+      <h2 class="section-title">Projects I've <span>Shipped</span></h2>
+      <p class="section-sub">Full pipelines — from data ingestion to a live UI — not just notebooks.</p>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- MediRAG -->
+      <div class="gum-card project-card reveal">
+        <div class="project-media">
+          <img src="assets/rag-app-demo.gif" alt="MediRAG demo"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-fallback',innerHTML:'<i class=\'fa-solid fa-file-waveform\'></i><span>Drop rag-app-demo.gif into /assets to preview MediRAG here</span>'}))">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">RAG · Healthcare AI</span>
+          <h3>MediRAG (RAGnosis)</h3>
+          <ul>
+            <li>Full-stack AI-powered medical document analysis system using Retrieval-Augmented Generation.</li>
+            <li>End-to-end pipeline: ingestion → embeddings (LlamaIndex, HuggingFace) → vector search (Pinecone/FAISS) → LLM generation.</li>
+            <li>FastAPI backend, Next.js frontend, Docker Compose deployment.</li>
+            <li>Semantic search with source-grounded responses for accurate medical Q&amp;A.</li>
+          </ul>
+          <div class="project-stack">
+            <span>FastAPI</span><span>Next.js</span><span>Pinecone</span><span>FAISS</span><span>LlamaIndex</span><span>Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHawk -->
+      <div class="gum-card project-card reveal">
+        <div class="project-media">
+          <img src="assets/images/githawk-demo.gif" alt="GitHawk demo"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-fallback',innerHTML:'<i class=\'fa-brands fa-github\'></i><span>Add a GitHawk screenshot/gif to /assets/images</span>'}))">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">AI Code Review</span>
+          <h3>GitHawk</h3>
+          <ul>
+            <li>Full-stack AI-powered GitHub Pull Request reviewer — open-source alternative to CodeRabbit.</li>
+            <li>RAG pipeline with Pinecone embeddings indexes entire repo codebases for context-aware review.</li>
+            <li>Inngest background job runs vector search, generates a structured review with Gemini 2.5 Flash (walkthrough, Mermaid diagram, bug analysis) and posts it as an inline PR comment.</li>
+            <li>Polar-powered subscriptions and a dedicated index-repo function for first-connection embedding.</li>
+          </ul>
+          <div class="project-stack">
+            <span>Next.js</span><span>Better Auth</span><span>Pinecone</span><span>Gemini AI</span><span>Inngest</span><span>Polar</span><span>PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a class="btn btn-primary" href="https://github.com/Abhijit1102" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a class="btn btn-ghost" href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- v0-clone -->
+      <div class="gum-card project-card reveal">
+        <div class="project-media">
+          <img src="assets/cli_agent-demo.gif" alt="v0-clone coding agent demo"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-fallback',innerHTML:'<i class=\'fa-solid fa-terminal\'></i><span>Drop cli_agent-demo.gif into /assets to preview the coding agent here</span>'}))">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">AI Agents · Code-Gen</span>
+          <h3>v0-clone</h3>
+          <ul>
+            <li>Full-stack AI UI generation platform inspired by v0.dev — plain-English feature descriptions become a live Next.js preview in a real cloud sandbox.</li>
+            <li>Inngest Agent Kit coding agent (GPT-4.1-mini) with terminal, file read/write tools that autonomously scaffolds and debugs code inside E2B sandboxes.</li>
+            <li>Sandbox-reuse logic reconnects across conversation turns, preserving installed modules and file state.</li>
+            <li>Every generation persisted as a Fragment (file snapshot + live URL) for full multi-turn history via Prisma/PostgreSQL.</li>
+          </ul>
+          <div class="project-stack">
+            <span>Next.js</span><span>Inngest Agent Kit</span><span>GPT-4.1</span><span>E2B Sandboxes</span><span>Clerk</span><span>PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Patho-Predict -->
+      <div class="gum-card project-card reveal">
+        <div class="project-media">
+          <img src="assets/images/patho-predict-demo.gif" alt="Patho-Predict demo"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-fallback',innerHTML:'<i class=\'fa-solid fa-dna\'></i><span>Add a Patho-Predict screenshot/gif to /assets/images</span>'}))">
+        </div>
+        <div class="project-body">
+          <span class="project-tag">Genomics · Bioinformatics</span>
+          <h3>Patho-Predict</h3>
+          <ul>
+            <li>Genomic variant pathogenicity prediction platform — input a chromosomal position + alt nucleotide, get an AI-powered clinical classification with evidence.</li>
+            <li>Modal serverless FastAPI endpoint fetches the reference base from UCSC, translates codon changes with Biopython, and scores across CADD-like, biochemical-severity and GC-conservation signals.</li>
+            <li>Weighted model (0.45 × CADD + 0.35 × ESM-proxy + 0.20 × Conservation) outputs Likely Pathogenic / Uncertain / Likely Benign.</li>
+            <li>ClinVar overlays, gene visualization and 7 Next.js API routes across UCSC/NCBI, supporting hg38, hg19, mm39 and more.</li>
+          </ul>
+          <div class="project-stack">
+            <span>Next.js</span><span>Modal</span><span>FastAPI</span><span>Biopython</span><span>UCSC API</span><span>ClinVar</span><span>Pinecone</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
