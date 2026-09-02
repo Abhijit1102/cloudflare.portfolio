@@ -168,17 +168,22 @@ git clone https://github.com/Abhijit1102/cloudflare.portfolio.git
 cd cloudflare.portfolio
 ```
 
+This portfolio is a Vite + React single-page application. The existing HTML fragments in `components/` are composed by `src/App.jsx`, while `style.css` contains the visual system.
+
+
 ---
 
 ## ⭐ Support
 
 If you find the portfolio or projects interesting, consider giving the repository a ⭐.
 
+
 ---
 
 <p align="center">
 
 ### 🚀 Build. Ship. Learn. Repeat.
+
 
 **AI/ML • Full-Stack • Backend • Cloud**
 

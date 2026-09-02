@@ -438,7 +438,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .field input:focus, .field textarea:focus { outline: none; box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); }
 .field textarea { resize: vertical; min-height: 120px; }
-.form-note { font-size: 0.78rem; color: var(--muted-foreground); }
+.form-note { display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: var(--muted-foreground); transition: color .2s ease; }
+.form-note.is-opening { color: var(--primary); animation: note-in .35s ease both; }
+.form-note-loader { width: 16px; height: 16px; border: 2px solid color-mix(in oklch, var(--primary) 25%, transparent); border-top-color: var(--primary); border-radius: 50%; animation: spin .75s linear infinite; flex-shrink: 0; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes note-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
 
 /* ==========================================================================
