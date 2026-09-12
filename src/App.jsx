@@ -57,14 +57,36 @@ function App() {
       const target = event.target.closest('button, a, .cert-card');
       if (!target) return;
 
+      // 1. Handle Mobile Menu Toggle
       if (target.id === 'navToggle') setMenuOpen((open) => !open);
+      
+      // 2. Handle Resume Modals
       if (target.id === 'openResumeBtn' || target.id === 'openResumeBtnHero') setResumeOpen(true);
       if (target.id === 'closeResumeBtn' || target.closest('#resumeModal') === target) setResumeOpen(false);
-      if (target.closest('.nav-links a')) setMenuOpen(false);
+      
+      // 3. FIX: Handle Nav Links for same-page smooth scrolling
+      const navLink = target.closest('.nav-links a');
+      if (navLink) {
+        event.preventDefault(); // Stops the browser from reloading/opening a new page
+        setMenuOpen(false);     // Closes the mobile menu
+        
+        const href = navLink.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const section = document.querySelector(href);
+          if (section) {
+            // Smoothly scroll to the section
+            section.scrollIntoView({ behavior: 'smooth' });
+            // Update the URL hash without reloading the page
+            window.history.pushState(null, '', href); 
+          }
+        }
+      }
 
+      // 4. Handle Certificates
       const certificate = target.closest('.cert-card');
       if (certificate?.dataset.cert) setCertificateImage({ src: certificate.dataset.cert, title: certificate.dataset.title });
 
+      // 5. Handle Project Demos
       const demo = target.closest('.js-demo-btn');
       if (demo?.dataset.gif) {
         event.preventDefault();
@@ -73,6 +95,7 @@ function App() {
     };
 
     const handleSubmit = (event) => {
+      // ... (keep your existing handleSubmit code here)
       const form = event.target.closest('#contactForm');
       if (!form) return;
       event.preventDefault();
